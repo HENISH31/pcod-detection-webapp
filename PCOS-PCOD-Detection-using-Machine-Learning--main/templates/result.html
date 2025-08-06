@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <style>
+        /* Reset and base styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+           
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            position: relative;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* Main content */
+        h1 {
+            text-align: center;
+            color: #d81b60; /* Pink color */
+            margin: 50px 0;
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Styling the result container */
+        .result-container {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6)); /* Soft gradient background */
+            width: 80%;
+            max-width: 750px;
+            margin: 50px auto;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .result-container:hover {
+            box-shadow: 0 6px 50px rgba(0, 0, 0, 0.15);
+            transform: translateY(-10px);
+        }
+
+        .result-container p {
+            font-size: 22px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        .result-container p strong {
+            color: #d81b60; /* Highlighted text color */
+            font-weight: 600;
+        }
+
+        .result-container a {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: #f48fb1; /* Soft pink */
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .result-container a:hover {
+            background-color: #f06292; /* Darker pink on hover */
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .result-container {
+                width: 90%;
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .result-container p {
+                font-size: 18px;
+            }
+
+            .result-container a {
+                font-size: 18px;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+
+    <!-- Prediction Result Content -->
+    <div class="result-container">
+        <h1>PCOD Prediction Result</h1>
+        <p><strong>Prediction:</strong> {{ result['prediction'] }}</p>
+        <p><strong>Chance of PCOD:</strong> {{ result['probability_PCOS'] }}%</p>
+        <a href="/">Go Back</a>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+    </div>
+{% endblock %}

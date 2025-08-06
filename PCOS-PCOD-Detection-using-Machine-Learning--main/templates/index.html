@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+  
+    <div style="display: flex; width: 90%; height: 85vh; margin: 0 auto; align-items: center; justify-content: space-between;">
+
+        <!-- Left section (with centered text and button) -->
+        <div style="width: 60%; height: 100%; padding: 50px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; text-align: left;">
+            <h1 style="font-size: 5rem; font-weight: bold; color: #e2648c; font-family: 'Arial', sans-serif; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 20px;">
+                Polysense
+            </h1>
+            <p style="font-size: 1.8rem; line-height: 1.8; font-family: 'Georgia', serif; color: #333; max-width: 650px; margin-bottom: 30px;">
+                <span style="color: #e2648c; font-weight: bold;">Early Detection</span>, Better Direction: Take Charge of Your <span style="color: #e2648c; font-weight: bold;">PCOD Journey</span>.
+            </p>
+            <a href="/test" style="text-decoration: none;">
+                <button style="padding: 18px 50px; font-size: 1.5rem; font-weight: bold; color: white; background-color: #e2648c; border: none; border-radius: 50px; cursor: pointer; box-shadow: 0 10px 20px rgba(226, 100, 140, 0.3); transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;" 
+                onmouseover="this.style.backgroundColor='#d14f7a'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 15px 30px rgba(226, 100, 140, 0.5)';" 
+                onmouseout="this.style.backgroundColor='#e2648c'; this.style.transform='scale(1)'; this.style.boxShadow='0 10px 20px rgba(226, 100, 140, 0.3)';">
+            Click Here to Test
+        </button>
+        
+            </a>
+        </div>
+
+        <!-- Right section (with image) -->
+        <div style="width: 40%; height: 100%; display: flex; align-items: center; justify-content: center;">
+            <img src="/static/images/1sthome.png" alt="Polysense" style="width: 150%; height: 80%; object-fit: cover; border-radius: 8px;">
+        </div>
+
+    </div>
+
+    <!-- Second image section with text beside it -->
+    <div style="display: flex; align-items: center; justify-content: flex-start; width: 100%; height: 70vh; padding: 20px 0;">
+
+        <!-- Image section with src on the left -->
+        <div style="width: 60%; height: 100%; padding-right: 20px;">
+            <img src="/static/images/2nd home.webp" alt="Polysense" style="width: 105%; height: 90%; object-fit: cover; border-radius: 10px;">
+        </div>
+
+        <!-- Text beside the image on the right -->
+        <div style="color: #333; font-family: 'Arial', sans-serif; padding-left: 30px; display: flex; flex-direction: column; justify-content: center;">
+            <p style="font-size: 1.8rem; line-height: 1.8; max-width: 650px; color: #444; font-weight: 500; letter-spacing: 0.5px; text-align: justify; margin-bottom: 20px;">
+                <span style="font-size: 1.9rem; color: #e2648c; font-weight: bold;">Polycystic Ovary Syndrome (PCOD)</span> is a hormonal disorder that can manifest in various ways. Recognizing the symptoms early can help in managing and treating the condition effectively.
+            </p>
+            
+        </div>
+
+
+    </div>
+
+{% endblock %}
